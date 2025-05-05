@@ -1,0 +1,280 @@
+
+.date-picker{
+    width:100%;
+    position: relative;
+    flex-grow: 1;
+    border: 1px solid rgb(var(--colour-interactive-subtle-border-default, 146, 146, 146));
+    background: none;
+    padding: 0;
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    height: 3rem;
+    overflow: hidden;
+    order: 3;
+    outline: none;
+    border-radius: 4px;
+    color: rgb(var(--colour-text-and-icon-1, 17, 17, 17));
+}
+.input-field{
+    padding-bottom: 1rem !important;
+  }
+  .pb-2{
+    padding-bottom: 2rem !important;
+  } 
+  .pt-2{
+    padding-top: 2rem !important;
+  }
+  .list-view-item__control-icon{
+      display: none;
+  }
+  .font-size-800{
+    font-size: 		2.25rem !important;
+  }
+table{
+  width:100% !important
+}
+.loading__text{
+  margin-top: .5rem !important;
+}
+.toast {
+  position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    padding-inline-start: 1.5rem;
+    min-height: 4.125rem;
+    background: rgb(var(--colour-elevation-3, 17, 17, 17)) !important;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: transform 200ms cubic-bezier(0.9, 0, 1, 1);
+    z-index: 400;
+    pointer-events: none;
+    box-sizing: border-box;
+    transform: translate(100%, 0);
+}
+.toast__body-wrapper {
+  display: flex;
+  flex-grow: 1; 
+  flex-wrap: wrap;
+  align-items: center;
+}
+.toast:not(.show){
+  display: inline !important;
+
+}
+/* .toast__close-btn{
+  display: contents !important;
+} */
+.react-datepicker-wrapper{
+  width: 100% !important;
+}
+.list-view-item__title{
+  padding-left: 1rem;
+}
+.active_nav{
+  background-color: #DFDFDF;
+}
+.active_nav_font{
+  font-weight: bold !important;
+}
+.bg-ikea {
+  background-color: #0058A3 !important;
+  padding: 1rem !important;
+}
+.bg-ikea .nav-link{
+  color: #ffffff !important;
+}
+.bg-ikea .navbar-brand{
+  color: #ffffff !important;
+}
+.bg-ikea .navbar-brand :hover{
+  text-decoration: none !important;
+}
+input::file-selector-button {
+  margin-top: .5rem;
+  padding: 0.2em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+.s1 {
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 8.5pt;
+}
+.s2 {
+  color: black;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 7pt;
+}
+
+.s3 {
+  color: black;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 8.5pt;
+}
+
+.s4 {
+  color: black;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 8.5pt;
+}
+.s5 {
+  color: black;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 6pt;
+}
+
+.s6 {
+  color: black;
+  font-family: Calibri, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 6pt;
+}
+
+.s8 {
+  color: #00F;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 8.5pt;
+}
+
+.s9 {
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 8pt;
+}
+
+.s11 {
+  color: #00F;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 8.5pt;
+}
+
+.s12 {
+  color: black;
+  font-family: "Times New Roman", serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 8pt;
+}
+
+.s13 {
+  color: black;
+  font-family: "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 12pt;
+}
+td a {
+color:#073c69;
+cursor:'pointer';
+font-weight:'bold';
+}
+.Action_to_Units
+{
+  background: #fbd914;
+  padding: 1rem;
+  font-weight: bold;
+}
+.important_font a{
+  font-size: 11px;
+  font-weight: bold;
+  color: #CC003D !important;
+}
+.important_font img{
+  width: 1rem;
+}
+.case_info{
+  padding: 1rem;
+  /* background-color: #F5F5F5; */
+}
+.link{
+  font-size: .8rem;
+  color:#0058a3;
+  text-decoration: underline;
+  font-weight: bold;
+}
+@media only screen and (max-device-width: 480px) {
+  .bg-ikea .navbar-brand{
+    font-size: 1rem;
+  }
+}@media only screen and (max-device-width: 380px){
+  .bg-ikea .navbar-brand{
+    font-size: .8rem;
+  } .bg-ikea .navbar img{
+    width: 5rem;
+  }
+  .collapse .nav-item a {
+     font-size: .6rem;
+  }
+}
+.myform {
+  max-width: auto;
+  margin: 0 0 0;
+}
+.success_font {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0A8A00  !important;
+}
+.error_font {
+  font-size: 14px;
+  font-weight: bold;
+  color: #CC003D  !important;
+}
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.label-info {
+  background-color: #0058A3 !important;
+}
+.label-warning {
+  color: #000000;
+  background-color: #fbd914;
+}
+/* 
+div.content {
+  display: table-cell;
+  vertical-align: middle;
+} */

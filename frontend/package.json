@@ -1,0 +1,64 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
+    "@ingka/base": "^4.2.0",
+    "@ingka/button": "^13.2.0",
+    "@ingka/checkbox": "^14.2.0",
+    "@ingka/focus": "^4.2.0",
+    "@ingka/form-field": "^9.1.0",
+    "@ingka/grid": "^6.2.0",
+    "@ingka/helper-text": "^0.2.7",
+    "@ingka/input-field": "^17.3.0",
+    "@ingka/list": "^7.1.0",
+    "@ingka/list-view": "^0.5.7",
+    "@ingka/loading": "^6.1.0",
+    "@ingka/modal": "^5.2.0",
+    "@ingka/select": "^10.2.0",
+    "@ingka/svg-icon": "^5.2.0",
+    "@ingka/table": "^2.1.0",
+    "@ingka/text-area": "^13.1.0",
+    "@ingka/toast": "^13.2.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "file-saver": "^2.0.5",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.18.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.2",
+    "react-router-dom": "^6.19.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

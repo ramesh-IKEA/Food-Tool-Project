@@ -1,0 +1,855 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Invoice Example</title>
+    <!-- <link rel="stylesheet" href="http://172.17.240.1:5000/stylesheets/style.css" /> -->
+    <style>
+        .fontLarge {
+            font-size: large;
+        }
+
+        .fontMedium {
+            font-size: medium;
+        }
+
+        .invoice-box {
+            padding: 2rem;
+        }
+
+        .pullright {
+            align: right;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+        }
+
+        h2 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 15.5pt;
+        }
+
+        h4 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        .s1 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        .s2 {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 7pt;
+        }
+
+        .s3 {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        .s4 {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        p {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 7pt;
+            margin: 0pt;
+        }
+
+        .s5 {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 6pt;
+        }
+
+        .s6 {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 6pt;
+        }
+
+        .s8 {
+            color: #00F;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: underline;
+            font-size: 8.5pt;
+        }
+
+        .s9 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 8pt;
+        }
+
+        .s11 {
+            color: #00F;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: underline;
+            font-size: 8.5pt;
+        }
+
+        .s12 {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: underline;
+            font-size: 8pt;
+        }
+
+        .s13 {
+            color: black;
+            font-family: "Trebuchet MS", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        .s14 {
+            color: black;
+            font-family: "Trebuchet MS", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 7pt;
+        }
+
+        h1 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16.5pt;
+        }
+
+        .h3,
+        h3 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 9pt;
+        }
+
+        .s15 {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 9pt;
+        }
+
+        .a {
+            color: black;
+            font-family: Calibri, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 9pt;
+        }
+
+        .s16 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 7pt;
+        }
+
+        .s17 {
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 9pt;
+            vertical-align: -3pt;
+        }
+
+        table,
+        tbody {
+            vertical-align: top;
+            overflow: visible;
+        }
+
+        .art_table td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        @media print {
+            .pageBrake {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box" style="padding:1rem;">
+        <table cellpadding="0" cellspacing="0" width="1000pt">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title" width="100px">
+                                <img width="146" height="45"
+                                    src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTAwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwMDU4QUIiIGQ9Ik05OS45ODYgNDBIMFYwaDEwMHY0MHoiLz48cGF0aCBkPSJNMiAyMGMwIDkuODMzIDIwLjExNiAxOCA0OC4wMDcgMThTOTggMjkuODMzIDk4IDIwIDc3Ljg4NCAyIDUwLjAwNyAyQzIyLjEzMSAyIDIgMTAuMTY3IDIgMjB6IiBmaWxsPSIjRkJEOTE0Ii8+PHBhdGggZD0iTTQ2LjQ0OCAyNi4wMDVjLjMxNS40NDcuNjYuODY3IDEuMDYgMS4yNDVoLTEwLjgyYzAtLjQyLS40MTYtMS4yNzMtLjg3NS0xLjk0NWEyMTE5LjAxIDIxMTkuMDEgMCAwMS0yLjkzOC00LjM1djUuMDVjMCAuNDIgMCAuODI1LjIxNSAxLjI0NWgtOS4wMTVjLjIxNS0uNDIuMjE1LS44MjYuMjE1LTEuMjQ1VjE0YzAtLjQyIDAtLjgyNi0uMjE1LTEuMjQ1aDkuMDE1Yy0uMjE1LjQyLS4yMTUuODI1LS4yMTUgMS4yNDV2NS4yNDZzMi44OC0zLjY2NSAzLjU0LTQuNTE5Yy41MDItLjY0MyAxLjExOC0xLjU1MyAxLjExOC0xLjk3Mmg5LjQwMmMtLjY0NS40Mi0xLjM2MSAxLjE3NS0xLjk0OSAxLjg3NGwtMy40NCA0LjFzNC4zMjkgNi40NSA0LjkwMiA3LjI3NXpNNDkuMjg2IDE0djEyLjAwNGMwIC40MiAwIC44MjUtLjIxNSAxLjI0NWgxNy40di00LjAzYy0uNDMuMjEtLjg0Ni4yMS0xLjI3Ni4yMWgtNy4zMjR2LTEuOTAyaDcuMDM3di0zLjA1aC03LjAzN1YxNi41Nmg3LjMyNGMuNDMgMCAuODQ2IDAgMS4yNzYuMTk2di00LjAxNWgtMTcuNGMuMjE1LjQzMy4yMTUuODQuMjE1IDEuMjU5em00MS4yOTIgMTIuMDA0Yy4xNDQuNDYxLjM4Ny44ODEuNzAzIDEuMjQ1SDgxLjg1Yy4wNDMtLjQyLS4xMTUtLjgyNi0uMjg3LTEuMjQ1IDAgMC0uMTQzLS4zMzYtLjM0NC0uODI2bC0uMDg2LS4yMWgtNS40MzJsLS4wODYuMjI0cy0uMTU4LjQwNi0uMzAxLjgyNmMtLjE0My40Mi0uMzAxLjgyNS0uMjQ0IDEuMjQ1aC03LjQzOGEzLjY0IDMuNjQgMCAwMC42NzMtMS4yNDVsNC40NTgtMTIuMDA0Yy4xNTctLjQyLjMxNS0uODI2LjI1OC0xLjI0NWgxMi41N2MtLjExNS40Mi4xMTQuODI1LjI3MiAxLjI0NS4zNzIuOTEgNC40IDExLjE3OCA0LjcxNSAxMS45OXptLTEwLjYzNS00LjFsLTEuMzE4LTMuMzU3YTcuMjg4IDcuMjg4IDAgMDEtLjI4Ny0uOTUyIDUuNTAxIDUuNTAxIDAgMDEtLjI1OC45NTJjLS4wNDMuMTQtLjYwMiAxLjYwOS0xLjI0NyAzLjM1N2gzLjExem0tNjAuMTQtOS4xNUgxMGMuMjE1LjQyLjIxNS44MjYuMjE1IDEuMjQ2djEyLjAwNGMwIC40MiAwIC44MjUtLjIxNSAxLjI0NWg5LjgwNGMtLjIxNS0uNDItLjIxNS0uODI2LS4yMTUtMS4yNDVWMTRjMC0uNDIgMC0uODI2LjIxNS0xLjI0NXptNjcuNzY1IDEuMTQ4Yy0uMDQzLTEuMDIxLjc3NC0xLjg3NSAxLjgyLTEuOTAzaC4xM2MxLjA2LS4wMTQgMS45MzQuNzk4IDEuOTQ5IDEuODMzdi4wN2MuMDI4IDEuMDUtLjgxNyAxLjkzLTEuOTA2IDEuOTU5LTEuMDc1LjAyOC0xLjk3OC0uNzk4LTIuMDA3LTEuODYxLjAxNC0uMDI4LjAxNC0uMDcuMDE0LS4wOTh6bS4zODcgMGMwIC44NC43MDMgMS41MjUgMS41NjMgMS41MjVzMS41NjItLjY4NiAxLjU2Mi0xLjUyNWMwLS44NC0uNzAyLTEuNTI1LTEuNTYyLTEuNTI1LS44MzItLjAyOC0xLjUzNC42MDItMS41NjMgMS40MTN2LjExMnptMS4xNzYgMS4xMzNoLS4zNDR2LTIuMjk0aC44NzRhLjc0Ljc0IDAgMDEuNzMuNzQxYzAgLjI4LS4xNTcuNTMyLS40MTUuNjcybC41MDIuODgxaC0uMzg3bC0uNDU5LS44MTFoLS41MDF2LjgxMXptMC0xLjEzM2guNDczYy4yMjkuMDE0LjQzLS4xNTQuNDMtLjM3OHMtLjE1OC0uNDItLjM4Ny0uNDJoLS41MTZ2Ljc5OHoiIGZpbGw9IiMwMDU4QTMiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48L3N2Zz4=' />
+                            </td>
+                            <td width="50px"></td>
+                            <td>
+                                <b class="font20px">Buyer Claim</b> <br>
+                                <b class="fontMedium">Product Quality</b>
+                            </td>
+                            <td align="right" class="pullright" border="1">
+                                <table style="padding-left:15rem;">
+                                    <tr>
+                                        <td>
+                                            <span style="font-size: 10px;">Claim Overview Serialno</span> <br>
+                                            <span><b>{{data.case_id}}</b></span>
+                                        </td>
+
+                                    </tr>
+                                    <!-- <tr >
+                                         <td  >
+                                             <span style="font-size: 10px;">Sub Claim Serialno. - Seq.</span> <br>
+                                             <span><b>IN-DT020-6771985-2</b></span>
+                                         </td>
+                                         
+                                     </tr> -->
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        <table style="border-collapse:collapse;margin-left:6.76pt;padding-right: 2rem;" cellspacing="0" width="1000pt">
+            <tr style="height:11pt">
+                <td style="width:73pt">
+                </td>
+                <td style="width:333pt" colspan="2">
+                    <p class="s1" style="padding-right: 39pt;text-indent: 0pt;line-height: 10pt;text-align: right;">
+                        Date:
+                    </p>
+                </td>
+                <td style="width:63pt">
+                    <p class="s2"
+                        style="padding-top: 1pt;padding-right: 2pt;text-indent: 0pt;line-height: 8pt;text-align: right;padding-right: 2pt;">
+                       {{date}}</p>
+                </td>
+            </tr>
+            <tr style="height:23pt">
+                <td style="width:73pt;">
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                    <p class="s1"
+                        style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                        To
+                        Company:
+                    </p>
+                </td>
+                <td style="width:333pt" colspan="2">
+                    <p class="s1"
+                        style="padding-top: 1pt;padding-right: 5pt;text-indent: 0pt;text-align: right;padding-right: 2pt;">
+                        No. of
+                        Pages:</p>
+                    <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                        {{data.sender_name}}
+                    </p>
+                </td>
+                <td style="width:63pt">
+                    <p class="s3" style="padding-right: 2pt;text-indent: 0pt;text-align: right;padding-right: 2pt;">1
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                <td style="width:73pt">
+                    <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Buyer:
+                    </p>
+                </td>
+                <td style="width:333pt" colspan="2">
+                    <p class="s3"
+                        style="padding-top: 8pt;padding-left: 2pt;text-indent: 2pt;line-height: 109%;text-align: left;">
+                        3600, IKEA India Private Limited, Unit No. 421, DLF Tower A, Jasola District Centre, New Delhi,
+                        110044</p>
+                </td>
+                <td style="width:63pt">
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                </td>
+            </tr>
+            <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                <td style="width:73pt">
+                    <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Reason
+                        for claim:</p>
+                </td>
+                <td style="width:333pt" colspan="2">
+                    <p class="s3"
+                        style="padding-top: 8pt;padding-left: 2pt;text-indent: 2pt;line-height: 109%;text-align: left;">
+                        {{data.notes}}</p>
+                </td>
+                <td style="width:63pt">
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                </td>
+            </tr>
+        </table>
+        <!-- article_table -->
+        <table class="art_table" style="border-collapse:collapse;margin-left:5.73498pt;width:760pt" cellspacing="0">
+            <tbody>
+                <tr style="height:28pt">
+                    <td style="width:37pt;">
+                        <p class="s3" style="padding-left: 13pt;text-indent: -8pt;line-height: 112%;text-align: left;">
+                            Incident no.</p>
+                    </td>
+                    <td style="width:52pt;">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">ArtNo - ArtName</p>
+                    </td>
+                    <td style="width:45pt;">
+                        <p class="s3" style="text-indent: 0pt;text-align: center;">Batch Number</p>
+                    </td>
+                    <td style="width:65pt;">
+                        <p class="s3" style="padding-left: 5pt;padding-right: 4pt;text-indent: 0pt;text-align: center;">
+                            Invoice No.</p>
+                    </td>
+                    <td style="width:28pt;">
+                        <p class="s3"
+                            style="padding-left: 1pt;padding-right: 3pt;text-indent: 0pt;line-height: 112%;text-align: left;">
+                            Store No.</p>
+                    </td>
+                    <td style="width:20pt;">
+                        <p class="s3"
+                            style="padding-left: 5pt;padding-right: 4pt;text-indent: -1pt;line-height: 112%;text-align: left;">
+                            Clm qty</p>
+                    </td>
+                    <td style="width:22pt;">
+                        <p class="s3" style="padding-left: 2pt;padding-right: 2pt;text-indent: 0pt;text-align: center;">
+                            UOM</p>
+                    </td>
+                    <td style="width:36pt;">
+                        <p class="s3" style="padding-left: 9pt;text-indent: -7pt;line-height: 112%;text-align: left;">
+                            Suggested action</p>
+                    </td>
+                    <td style="width:30pt;">
+                        <p class="s3"
+                            style="padding-left: 1pt;padding-right: 1pt;text-indent: 0pt;line-height: 112%;text-align: left;">
+                            Item price (INR)</p>
+                    </td>
+                    <td style="width:30pt;">
+                        <p class="s3"
+                            style="padding-left: 3pt;padding-right: 5pt;text-indent: 0pt;line-height: 112%;text-align: center;">
+                            Item freight cost</p>
+                        <p class="s3"
+                            style="padding-left: 4pt;padding-right: 4pt;text-indent: 0pt;line-height: 5pt;text-align: center;">
+                            (INR)</p>
+                    </td>
+                    <td style="width:31pt;">
+                        <p class="s3" style="padding-right: 1pt;text-indent: 0pt;line-height: 112%;text-align: center;">
+                            Claimed Goods value</p>
+                    </td>
+                    <td style="width:40pt;">
+                        <p class="s3"
+                            style="padding-left: 2pt;padding-right: 2pt;text-indent: -1pt;line-height: 112%;text-align: center;">
+                            Labour hours+ Other costs</p>
+                    </td>
+                    <td style="width:58pt;">
+                        <p class="s3"
+                            style="padding-left: 20pt;padding-right: 20pt;text-indent: 0pt;text-align: center;">Total
+                        </p>
+                    </td>
+                </tr>
+                {{#each data.articles}}
+                <tr style="height:25pt">
+                    <td style="width:37pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br></p>
+                        <p class="s7" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">{{case_id}}</p>
+                    </td>
+                    <td style="width:52pt;">
+                        <p class="s10" style="padding-left: 1pt;text-indent: 0pt;line-height: 110%;text-align: left;">
+                            {{article_name}}{{articel_number}}
+                        </p>
+                    </td>
+                    <td style="width:45pt;">
+                        <p class="s9" style="padding-left: 1pt;text-indent: 0pt;text-align: center;">
+                            {{batch_number}}
+                        </p>
+                    </td>
+                    <td style="width:65pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br></p>
+                        <p class="s9" style="padding-left: 5pt;padding-right: 4pt;text-indent: 0pt;text-align: center;">
+                            {{MH3PLTI232400200}}
+                        </p>
+                    </td>
+                    <td style="width:28pt;">
+                        <p class="s9" style="text-indent: 0pt;text-align: right;">
+                            {{store_id}}
+                        </p>
+                    </td>
+                    <td style="width:20pt;">
+                        <p class="s10" style="text-indent: 0pt;text-align: center;">
+                            {{affected_quantity}}
+                        </p>
+                    </td>
+                    <td style="width:22pt;">
+                        <p style="text-indent: 0pt;text-align: left;">{{data.action_confirmation}}</p>
+                    </td>
+                    <td style="width:36pt;">
+                        <p class="s10"
+                            style="padding-left: 11pt;padding-right: 10pt;text-indent: 0pt;text-align: center;">Scrap
+                        </p>
+                    </td>
+                    <td style="width:30pt;">
+                        <p class="s9" style="text-indent: 0pt;text-align: right;">
+                            {{article_value}}
+                        </p>
+                    </td>
+                    <td style="width:30pt;">
+                        <p class="s9" style="padding-left: 4pt;padding-right: 4pt;text-indent: 0pt;text-align: center;">
+                            0.00</p>
+                    </td>
+                    <td style="width:31pt;">
+                        <p class="s9" style="padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">
+                            0.00
+                        </p>
+                    </td>
+                    <td style="width:40pt;">
+                        <p class="s9" style="padding-left: 1pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">
+                            {{labor_hours_other_cost}}</p>
+                    </td>
+                    <td style="width:58pt;">
+                        <p class="s9"
+                            style="padding-left: 20pt;padding-right: 20pt;text-indent: 0pt;text-align: center;">
+                            {{line_total}}</p>
+                    </td>
+                </tr>
+                {{/each}}
+                <tr style="height:14pt">
+                    <td style="width:396pt;" colspan="11">
+                        <p style="text-indent: 0pt;text-align: left;"><br></p>
+                    </td>
+                    <td style="width:40pt;">
+                        <p class="s3" style="padding-left: 1pt;padding-right: 3pt;text-indent: 0pt;text-align: center;">
+                            Total Claim</p>
+                        <p class="s3"
+                            style="padding-left: 1pt;padding-right: 1pt;text-indent: 0pt;line-height: 6pt;text-align: center;">
+                            Value</p>
+                    </td>
+                    <td style="width:58pt;">
+                        <p class="s9" style="padding-right: 14pt;text-indent: 0pt;text-align: right;">{{total}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        <p class="s3" style="padding-top: 5pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">
+            Cost of Claim consists of compensation for goods value and other costs compensation concerned with damaged
+            or poor quality goods.</p>
+        <p class="s3" style="padding-left: 6pt;text-indent: 0pt;line-height: 157%;text-align: left;">
+            In order to handle this claim in the best way for both parties and in accordance with valid documented
+            agreement,</p>
+        <p class="s3" style="padding-left: 6pt;text-indent: 0pt;line-height: 6pt;text-align: left;">In order to handle
+            this claim in the best interest of both parties we look forward to receiving your answer within 10 working
+            days.</p>
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        <div style="width:1000pt;border-bottom-style:solid;border-bottom-width:1pt;padding-left: 5px;"></div>
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+        <table style="border-collapse:collapse;margin-left:5.7pt;width:1000pt;" cellspacing="0">
+            <tr style="height:13pt">
+                <td style="width:100pt">
+                    <p class="s1" style="padding-left: 2pt;text-indent: 0pt;text-align: left;">
+                        Creator :
+                    </p>
+                </td>
+                <td style="width:150pt">
+                    <p class="s1" style="padding-left: 28pt;text-indent: 0pt;text-align: left;">QUALITY SUPPORT CENTRE
+                        address</p>
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                    <p class="s5" style="padding-top: 1pt;padding-left: 28pt;text-indent: 0pt;text-align: left;">
+                        Nagasandra,yeshwantpur hobli</p>
+                    <p class="s5" style="padding-top: 1pt;padding-left: 28pt;text-indent: 0pt;text-align: left;">560073
+                        Bangalore. India</p>
+                </td>
+                <td style="width:250pt">
+                    <p class="s1" style="padding-left: 33pt;text-indent: 0pt;text-align: left;">Buyer</p>
+                    <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                    <p class="s5" style="padding-left: 33pt;text-indent: 0pt;text-align: left;">
+                        3800, IKEA India Private
+                        Limited
+                    </p>
+                    <p class="s5" style="padding-left: 33pt;text-indent: 0pt;text-align: left;">
+                        Unit No. 421, DLF Tower A
+                    </p>
+                    <p class="s5" style="padding-left: 33pt;text-indent: 0pt;text-align: left;">
+                        Jasola District Centre,
+                    </p>
+                    <p class="s5" style="padding-left: 33pt;text-indent: 0pt;text-align: left;">
+                        New Delhi, 110044
+                    </p>
+                </td>
+            </tr>
+            
+        </table>
+        <!-- second page -->
+        <p class="pageBrake" style="text-indent: 0pt;text-align: left;"><br /></p>
+        <div>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <table cellpadding="0" cellspacing="0" style="width:1000pt">
+                <tr class="top">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td class="title" width="100px">
+                                    <img width="146" height="45"
+                                        src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTAwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwMDU4QUIiIGQ9Ik05OS45ODYgNDBIMFYwaDEwMHY0MHoiLz48cGF0aCBkPSJNMiAyMGMwIDkuODMzIDIwLjExNiAxOCA0OC4wMDcgMThTOTggMjkuODMzIDk4IDIwIDc3Ljg4NCAyIDUwLjAwNyAyQzIyLjEzMSAyIDIgMTAuMTY3IDIgMjB6IiBmaWxsPSIjRkJEOTE0Ii8+PHBhdGggZD0iTTQ2LjQ0OCAyNi4wMDVjLjMxNS40NDcuNjYuODY3IDEuMDYgMS4yNDVoLTEwLjgyYzAtLjQyLS40MTYtMS4yNzMtLjg3NS0xLjk0NWEyMTE5LjAxIDIxMTkuMDEgMCAwMS0yLjkzOC00LjM1djUuMDVjMCAuNDIgMCAuODI1LjIxNSAxLjI0NWgtOS4wMTVjLjIxNS0uNDIuMjE1LS44MjYuMjE1LTEuMjQ1VjE0YzAtLjQyIDAtLjgyNi0uMjE1LTEuMjQ1aDkuMDE1Yy0uMjE1LjQyLS4yMTUuODI1LS4yMTUgMS4yNDV2NS4yNDZzMi44OC0zLjY2NSAzLjU0LTQuNTE5Yy41MDItLjY0MyAxLjExOC0xLjU1MyAxLjExOC0xLjk3Mmg5LjQwMmMtLjY0NS40Mi0xLjM2MSAxLjE3NS0xLjk0OSAxLjg3NGwtMy40NCA0LjFzNC4zMjkgNi40NSA0LjkwMiA3LjI3NXpNNDkuMjg2IDE0djEyLjAwNGMwIC40MiAwIC44MjUtLjIxNSAxLjI0NWgxNy40di00LjAzYy0uNDMuMjEtLjg0Ni4yMS0xLjI3Ni4yMWgtNy4zMjR2LTEuOTAyaDcuMDM3di0zLjA1aC03LjAzN1YxNi41Nmg3LjMyNGMuNDMgMCAuODQ2IDAgMS4yNzYuMTk2di00LjAxNWgtMTcuNGMuMjE1LjQzMy4yMTUuODQuMjE1IDEuMjU5em00MS4yOTIgMTIuMDA0Yy4xNDQuNDYxLjM4Ny44ODEuNzAzIDEuMjQ1SDgxLjg1Yy4wNDMtLjQyLS4xMTUtLjgyNi0uMjg3LTEuMjQ1IDAgMC0uMTQzLS4zMzYtLjM0NC0uODI2bC0uMDg2LS4yMWgtNS40MzJsLS4wODYuMjI0cy0uMTU4LjQwNi0uMzAxLjgyNmMtLjE0My40Mi0uMzAxLjgyNS0uMjQ0IDEuMjQ1aC03LjQzOGEzLjY0IDMuNjQgMCAwMC42NzMtMS4yNDVsNC40NTgtMTIuMDA0Yy4xNTctLjQyLjMxNS0uODI2LjI1OC0xLjI0NWgxMi41N2MtLjExNS40Mi4xMTQuODI1LjI3MiAxLjI0NS4zNzIuOTEgNC40IDExLjE3OCA0LjcxNSAxMS45OXptLTEwLjYzNS00LjFsLTEuMzE4LTMuMzU3YTcuMjg4IDcuMjg4IDAgMDEtLjI4Ny0uOTUyIDUuNTAxIDUuNTAxIDAgMDEtLjI1OC45NTJjLS4wNDMuMTQtLjYwMiAxLjYwOS0xLjI0NyAzLjM1N2gzLjExem0tNjAuMTQtOS4xNUgxMGMuMjE1LjQyLjIxNS44MjYuMjE1IDEuMjQ2djEyLjAwNGMwIC40MiAwIC44MjUtLjIxNSAxLjI0NWg5LjgwNGMtLjIxNS0uNDItLjIxNS0uODI2LS4yMTUtMS4yNDVWMTRjMC0uNDIgMC0uODI2LjIxNS0xLjI0NXptNjcuNzY1IDEuMTQ4Yy0uMDQzLTEuMDIxLjc3NC0xLjg3NSAxLjgyLTEuOTAzaC4xM2MxLjA2LS4wMTQgMS45MzQuNzk4IDEuOTQ5IDEuODMzdi4wN2MuMDI4IDEuMDUtLjgxNyAxLjkzLTEuOTA2IDEuOTU5LTEuMDc1LjAyOC0xLjk3OC0uNzk4LTIuMDA3LTEuODYxLjAxNC0uMDI4LjAxNC0uMDcuMDE0LS4wOTh6bS4zODcgMGMwIC44NC43MDMgMS41MjUgMS41NjMgMS41MjVzMS41NjItLjY4NiAxLjU2Mi0xLjUyNWMwLS44NC0uNzAyLTEuNTI1LTEuNTYyLTEuNTI1LS44MzItLjAyOC0xLjUzNC42MDItMS41NjMgMS40MTN2LjExMnptMS4xNzYgMS4xMzNoLS4zNDR2LTIuMjk0aC44NzRhLjc0Ljc0IDAgMDEuNzMuNzQxYzAgLjI4LS4xNTcuNTMyLS40MTUuNjcybC41MDIuODgxaC0uMzg3bC0uNDU5LS44MTFoLS41MDF2LjgxMXptMC0xLjEzM2guNDczYy4yMjkuMDE0LjQzLS4xNTQuNDMtLjM3OHMtLjE1OC0uNDItLjM4Ny0uNDJoLS41MTZ2Ljc5OHoiIGZpbGw9IiMwMDU4QTMiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48L3N2Zz4=' />
+                                </td>
+                                <td width="50px"></td>
+                                <td>
+                                    <b class="font20px">Buyer Claim</b> <br>
+                                    <b class="fontMedium">Product Quality</b>
+                                </td>
+                                <td align="right" class="pullright" border="1">
+                                    <table style="padding-left:15rem;">
+                                        <tr>
+                                            <td>
+                                                <span style="font-size: 10px;">Claim Overview Serialno</span> <br>
+                                                <span><b>{{data.case_id}}</b></span>
+                                            </td>
+
+                                        </tr>
+                                        <!-- <tr >
+                                     <td  >
+                                         <span style="font-size: 10px;">Sub Claim Serialno. - Seq.</span> <br>
+                                         <span><b>IN-DT020-6771985-2</b></span>
+                                     </td>
+                                     
+                                 </tr> -->
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <table style="margin-left:6.76pt;padding-right: 2rem;width:1000pt" cellspacing="0" >
+                <tr style="height:23pt">
+                    <td style="width:73pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                            To
+                            Company:
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            {{data.sender_name}}
+                        </p>
+                    </td>
+
+                </tr>
+                <tr style="height:23pt">
+                    <td style="width:73pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:23pt">
+                    <td style="width:73pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:73pt">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                            Buyer:
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s3"
+                            style="padding-top: 8pt;padding-left: 2pt;text-indent: 2pt;line-height: 109%;text-align: left;">
+                            3600, IKEA India Private Limited, Unit No. 421, DLF Tower A, Jasola District Centre, New
+                            Delhi,
+                            110044</p>
+                    </td>
+
+                </tr>
+                <tr style="border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:400pt" colspan="2">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                            Comments:</p>
+                    </td>
+                </tr>
+                <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"></p>
+                    </td>
+                </tr>
+                <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"></p>
+                    </td>
+
+                </tr>
+                <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:400pt;border-bottom: #000000 1pt solid;" colspan="2">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"></p>
+                    </td>
+
+                </tr>
+            </table>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <table style="margin-left:6.76pt;padding-right: 2rem;width:700pt" cellspacing="0">
+                <tr style="height:23pt">
+                    <td style="width:100pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                           Claim Accepted
+                        </p>
+                    </td>
+                    <td style="width: 50pt;">
+                        <p class="s3" style="padding-top: 10pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            Yes  <span  style="text-align: left;border: #000000 3px solid;width: 50pt;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </p>
+                    </td>
+                    <td style="width:10pt;">
+                       
+                    </td>
+                    <td style="width: 50pt;">
+                        <p class="s3" style="padding-top: 10pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            No  <span  style="text-align: left;border: #000000 3px solid;width: 50pt;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </p>
+                    </td>
+                    <td style="width:20pt"></td>
+                </tr>
+               
+                <tr style="height:23pt">
+                    <td style="width:100pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                            Examination of Goods required
+                        </p>
+                    </td>
+                    <td style="width: 50pt;">
+                        <p class="s3" style="padding-top: 10pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            Yes  <span  style="text-align: left;border: #000000 3px solid;width: 50pt;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </p>
+                    </td>
+                    <td style="width:10pt;">
+                       
+                    </td>
+                    <td style="width: 50pt;">
+                        <p class="s3" style="padding-top: 10pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            No  <span  style="text-align: left;border: #000000 3px solid;width: 50pt;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr style="height:23pt">
+                    <td style="width:100pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                            Accept suggested action
+                        </p>
+                    </td>
+                    <td style="width: 50pt;">
+                        <p class="s3" style="padding-top: 10pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            Yes  <span  style="text-align: left;border: #000000 3px solid;width: 50pt;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </p>
+                    </td>
+                    <td style="width:10pt;">
+                       
+                    </td>
+                    <td style="width: 50pt;">
+                        <p class="s3" style="padding-top: 10pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+                            No  <span  style="text-align: left;border: #000000 3px solid;width: 50pt;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </p>
+                    </td>
+                    <td>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                           Total Amount
+                        </p>
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                        {{total}}</p>
+                    </td>
+                </tr>
+            </table>
+            <table style="margin-left:6.76pt;padding-right: 2rem;width:700pt" cellspacing="0">
+                 <tr style="height:23pt">
+                    <td colspan="2"></td>
+                </tr>
+                <tr style="height:23pt">
+                    <td style="width:120pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                           Name of the Company :
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt dotted;" colspan="2">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+
+                        </p>
+                    </td>
+
+                </tr>
+                <tr style="height:23pt">
+                    <td style="width:120pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                            Address for goods return:
+                            (only when applicable)
+
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt dotted;" colspan="2">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:23pt">
+                    <td style="width:120pt;">
+                        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                        <p class="s1"
+                            style="padding-left: 1pt;text-indent: 0pt;line-height: 10pt;text-align: left;padding-right: 2pt;">
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt dotted;" colspan="2">
+                        <p class="s3" style="padding-left: 2pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:120pt">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                            Name (print):
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt dotted;" colspan="2">
+                        <p class="s3"
+                            style="padding-top: 8pt;padding-left: 2pt;text-indent: 2pt;line-height: 109%;text-align: left;">
+                           </p>
+                    </td>
+
+                </tr>
+                <tr style="height:36pt;">
+                    <td style="width:520pt" colspan="2">
+                        <p class="" style="padding-top: 7pt;padding-right: 20pt;text-indent: 0pt;text-align: right;">
+                            Company Stamp 
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height:36pt;border-top-style:solid;border-top-width:1pt;padding-right: 2pt;">
+                    <td style="width:120pt">
+                        <p class="s1" style="padding-top: 7pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                           Signature and Date:
+                        </p>
+                    </td>
+                    <td style="width:400pt;border-bottom: #000000 1pt dotted;" colspan="2">
+                        <p class="s3"
+                            style="padding-top: 8pt;padding-left: 2pt;text-indent: 2pt;line-height: 109%;text-align: left;">
+                           </p>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+</body>
+
+</html>

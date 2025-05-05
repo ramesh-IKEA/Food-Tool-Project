@@ -1,0 +1,13 @@
+// import '@ingka/avatar/dist/style.css';
+import '@ingka/base/dist/style.css';
+import '@ingka/modal/dist/style.css';
+import '@ingka/forms/dist/style.css';
+import '@ingka/grid/dist/style.css';
+import '@ingka/table/dist/style.css';
+import '@ingka/list/dist/style.css';
+import "@ingka/list-view/dist/style.css";
+import '@ingka/loading/dist/style.css';
+import '@ingka/svg-icon/dist/style.css';
+import '@ingka/button/dist/style.css';
+import '@ingka/toast/dist/style.css';
+import '@ingka/focus/dist/style.css';

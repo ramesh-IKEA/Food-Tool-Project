@@ -1,0 +1,4 @@
+/node_modules
+.env
+# /public/article_pictures
+/public/downloads

@@ -1,0 +1,58 @@
+name: Deploy backend Dev
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - server/**
+      - .github/workflows/backend.dev.yml
+
+env:
+  PROJECT_ID: ingka-qsc-fdr-test # Name of our GCP project.
+  GCR_LOCATION: asia # Location of our container registry (eu.gcr.io).
+  REPOSITORY: in-food-deviation-reporting # Name of our GCR repository.
+  SERVICE: food-deviation-reporting-backend # Name of our Cloud Run service.
+  REGION: asia-south1 # Region of our Cloud Run service
+
+jobs:
+  deploy:
+    permissions:
+      contents: "read"
+      id-token: "write"
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: "actions/checkout@v4"
+      - name: Google Auth
+        id: auth
+        uses: "google-github-actions/auth@v1"
+        with:
+          token_format: "access_token"
+          workload_identity_provider: "${{ secrets.GCP_IDENTITY_PROVIDER_DEV }}"
+          service_account: "${{ secrets.GCP_SA_TEST }}"
+
+      - name: Docker Auth
+        id: docker-auth
+        uses: "docker/login-action@v3"
+        with:
+          username: "oauth2accesstoken"
+          password: "${{ steps.auth.outputs.access_token }}"
+          registry: "${{ env.GCR_LOCATION }}.gcr.io"
+
+      - name: Build and Push Container
+        run: |-
+          docker build -t "${{ env.GCR_LOCATION }}.gcr.io/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:latest" ./server
+          docker push "${{ env.GCR_LOCATION }}.gcr.io/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:latest"
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        uses: "google-github-actions/deploy-cloudrun@v2"
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          image: ${{ env.GCR_LOCATION }}.gcr.io/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:latest
+
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}

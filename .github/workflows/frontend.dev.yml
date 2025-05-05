@@ -1,0 +1,54 @@
+name: QSC Frontend DEV CD
+defaults:
+  run:
+    working-directory: frontend
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - frontend/**
+      - .github/workflows/frontend.dev.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.0
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: Install Dependencies
+        run: npm install --silent
+      - name: Create env file
+        run: |
+          cat << EOF > .env
+          REACT_APP_DEV_BANKEND_PORT=${{ secrets.BACKEND_ENDPOINT }}
+          REACT_APP_PROD_BANKEND_PORT=${{ secrets.BACKEND_ENDPOINT }}
+          EOF
+      - name: Build Production
+        run:  CI=false && npm run build
+      - name: List content
+        run: ls -la
+      - id: auth
+        name: "Authenticate to Google Cloud"
+        uses: "google-github-actions/auth@v0.8.3"
+        with:
+          token_format: "access_token"
+          workload_identity_provider: ${{ secrets.GCP_IDENTITY_PROVIDER_DEV }}
+          service_account: ${{ secrets.GCP_SA_TEST }}
+      - id: upload-files
+        name: Deploy frontend
+        uses: google-github-actions/upload-cloud-storage@v0.10.4
+        with:
+          path: frontend/build
+          destination: food-deviation-dev
+          parent: false

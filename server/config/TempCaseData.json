@@ -1,0 +1,722 @@
+[
+    {
+        "carrier_name": "3434",
+        "receiving_unit_code": "578",
+        "sender_name": "100001725",
+        "invoice_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+        "invoice_number": "12345",
+        "name": "new Case0019",
+        "type": "PQ",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {},
+        "invoice": {},
+        "temperature_log": {},
+        "mandatory_checklist": {},
+        "caseID": "QSC-2023-35150658",
+        "supportingFiles": [],
+        "articles": [
+            {
+                "expiry_date": "2023-11-09",
+                "best_before_date": "2023-11-09",
+                "dispatch_date": "2023-11-09",
+                "manufacturing_date": "2023-11-08",
+                "other_cost": "5678",
+                "labor_hours": "8",
+                "action_confirmation": "yes",
+                "suggested_action": "test",
+                "causing_party_code": "100001725",
+                "damage_type": "package",
+                "over_delivery": "0",
+                "damaged_quantity": "",
+                "batch_number": "00011112",
+                "supplier_number": "100000429",
+                "articel_number": "100002099",
+                "uniquie_id": "QSC-2023-35150658_01522216445285",
+                "store_id": "578"
+            },
+            {
+                "expiry_date": "2023-11-09",
+                "best_before_date": "2023-11-09",
+                "dispatch_date": "2023-11-09",
+                "manufacturing_date": "2023-11-08",
+                "other_cost": "4567",
+                "labor_hours": "8",
+                "action_confirmation": "test",
+                "suggested_action": "3",
+                "causing_party_code": "100001725",
+                "damage_type": "package",
+                "over_delivery": "2",
+                "damaged_quantity": "1",
+                "batch_number": "123456",
+                "supplier_number": "100000429",
+                "articel_number": "100003647",
+                "uniquie_id": "QSC-2023-35150658_1687961755563",
+                "store_id": "578",
+                "affected_quantity": "",
+                "available_stock": ""
+            },
+            {
+                "damaged_quantity": "30",
+                "batch_number": "11111",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-08",
+                "best_before_date": "2023-11-14",
+                "expiry_date": "2023-11-15",
+                "uniquie_id": "QSC-2023-35150658_01522216445285",
+                "caseId": "QSC-2023-35150658",
+                "store_id": "545",
+                "articel_number": "100002099",
+                "supplier_number": "100000429",
+                "causing_party_code": "100001725",
+                "damage_type": "package"
+            },
+            {
+                "damaged_quantity": "20",
+                "batch_number": "0001111",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-08",
+                "best_before_date": "2023-11-15",
+                "expiry_date": "2023-11-15",
+                "uniquie_id": "QSC-2023-35150658_01522216445285",
+                "caseId": "QSC-2023-35150658",
+                "store_id": "628",
+                "articel_number": "100002099",
+                "supplier_number": "100000429",
+                "causing_party_code": "100001725",
+                "damage_type": "package"
+            }
+        ],
+        "status": "Buyers claim"
+    },
+    {
+        "carrier_name": "3434",
+        "receiving_unit_code": "545",
+        "sender_name": "100001725",
+        "invoice_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+        "invoice_number": "12345",
+        "name": "new Case0019",
+        "type": "PQ",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {},
+        "invoice": {},
+        "temperature_log": {},
+        "mandatory_checklist": {},
+        "caseID": "QSC-2023-35150658",
+        "supportingFiles": [],
+        "articles": [
+            {
+                "expiry_date": "2023-11-09",
+                "best_before_date": "2023-11-09",
+                "dispatch_date": "2023-11-09",
+                "manufacturing_date": "2023-11-08",
+                "other_cost": "666",
+                "labor_hours": 5,
+                "action_confirmation": "yes",
+                "suggested_action": "test",
+                "causing_party_code": "100001725",
+                "damage_type": "package",
+                "over_delivery": "0",
+                "damaged_quantity": "20",
+                "batch_number": "0001111",
+                "supplier_number": "100000429",
+                "articel_number": "100002099",
+                "uniquie_id": "QSC-2023-35150658_01522216445285",
+                "store_id": "578"
+            },
+            {
+                "expiry_date": "2023-11-09",
+                "best_before_date": "2023-11-09",
+                "dispatch_date": "2023-11-09",
+                "manufacturing_date": "2023-11-08",
+                "other_cost": "666",
+                "labor_hours": 5,
+                "action_confirmation": "yes",
+                "suggested_action": "test",
+                "causing_party_code": "100001725",
+                "damage_type": "package",
+                "over_delivery": "0",
+                "damaged_quantity": "20",
+                "batch_number": "0001111",
+                "supplier_number": "100000429",
+                "articel_number": "100003647",
+                "uniquie_id": "QSC-2023-35150658_1687961755563",
+                "store_id": "578"
+            },
+            {
+                "damaged_quantity": "30",
+                "batch_number": "11111",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-08",
+                "best_before_date": "2023-11-14",
+                "expiry_date": "2023-11-15",
+                "uniquie_id": "QSC-2023-35150658_01522216445285",
+                "caseId": "QSC-2023-35150658",
+                "store_id": "545",
+                "articel_number": "100002099",
+                "supplier_number": "100000429",
+                "causing_party_code": "100001725",
+                "damage_type": "package"
+            },
+            {
+                "damaged_quantity": "20",
+                "batch_number": "0001111",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-08",
+                "best_before_date": "2023-11-15",
+                "expiry_date": "2023-11-15",
+                "uniquie_id": "QSC-2023-35150658_01522216445285",
+                "caseId": "QSC-2023-35150658",
+                "store_id": "628",
+                "articel_number": "100002099",
+                "supplier_number": "100000429",
+                "causing_party_code": "100001725",
+                "damage_type": "package"
+            }
+        ],
+        "status": "open"
+    },
+    {
+        "carrier_name": "weqr",
+        "receiving_unit_code": "578",
+        "sender_name": "100001729",
+        "invoice_date": "Wed Nov 08 2023 00:00:00 GMT+0530 (India Standard Time)",
+        "invoice_number": "12345",
+        "name": "new Case0019",
+        "type": "PQ",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {
+            "0": {}
+        },
+        "invoice": {
+            "0": {}
+        },
+        "temperature_log": {
+            "0": {}
+        },
+        "mandatory_checklist": {
+            "0": {}
+        },
+        "caseID": "QSC-2023-59934342",
+        "supportingFiles": [],
+        "articles": [
+            {
+                "batch_number": "0001111",
+                "damaged_quantity": "",
+                "over_delivery": "",
+                "suggested_action": "",
+                "action_confirmation": "",
+                "labor_hours": "",
+                "other_cost": "",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002099",
+                "supplier_number": "100000620",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-15",
+                "best_before_date": "2023-11-15",
+                "expiry_date": "2023-11-08",
+                "uniquie_id": "QSC-2023-59934342_6734467270946",
+                "store_id": "578"
+            },
+            {
+                "batch_number": "0001111",
+                "damaged_quantity": "",
+                "over_delivery": "",
+                "suggested_action": "",
+                "action_confirmation": "",
+                "labor_hours": "",
+                "other_cost": "",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002099",
+                "supplier_number": "100000620",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-15",
+                "best_before_date": "2023-11-15",
+                "expiry_date": "22-Nov-2023",
+                "uniquie_id": "QSC-2023-59934342_0381267644477",
+                "store_id": "578"
+            },
+            {
+                "batch_number": "0001111",
+                "damaged_quantity": "",
+                "over_delivery": "",
+                "suggested_action": "",
+                "action_confirmation": "",
+                "labor_hours": "",
+                "other_cost": "",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002099",
+                "supplier_number": "100000620",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-15",
+                "best_before_date": "2023-11-15",
+                "expiry_date": "2023-11-08",
+                "uniquie_id": "QSC-2023-59934342_564347048808933",
+                "store_id": "578"
+            },
+            {
+                "batch_number": "0001111",
+                "damaged_quantity": "",
+                "over_delivery": "",
+                "suggested_action": "",
+                "action_confirmation": "",
+                "labor_hours": "",
+                "other_cost": "",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002101",
+                "supplier_number": "100000686",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-15",
+                "best_before_date": "2023-11-15",
+                "causing_party_code": "100000683",
+                "expiry_date": "2023-11-09",
+                "uniquie_id": "QSC-2023-59934342_00158341156397",
+                "store_id": "578",
+                "damage_picture": [
+                    "..",
+                    "server",
+                    "public",
+                    "article_pictures",
+                    "sskFGNwskX9VaHuoAglFYe7o.pdf"
+                ]
+            },
+            {
+                "batch_number": "0001111",
+                "damaged_quantity": "",
+                "over_delivery": "",
+                "suggested_action": "",
+                "action_confirmation": "",
+                "labor_hours": "",
+                "other_cost": "",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002101",
+                "supplier_number": "100000686",
+                "manufacturing_date": "2023-11-08",
+                "dispatch_date": "2023-11-15",
+                "best_before_date": "2023-11-15",
+                "causing_party_code": "100000683",
+                "expiry_date": "2023-11-09",
+                "uniquie_id": "QSC-2023-59934342_29255431656267",
+                "store_id": "578",
+                "damage_picture": "S_SNa2hQbaEsgUzBUEqfP2Ue.pdf"
+            }
+        ],
+        "status": "RJ"
+    },
+    {
+        "shipment_type": "Ambient",
+        "carrier_name": "test",
+        "receiving_unit_code": "545",
+        "dispatch_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+        "transport_id": "safsadf",
+        "consingnment_id": "000001111",
+        "unique_shipment_id": "24324",
+        "sender_name": "100001023",
+        "invoice_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+        "invoice_number": "12345",
+        "name": "test sq",
+        "type": "SQ",
+        "searl_number": "859565",
+        "truck_temprature": "23",
+        "shipment_checklist": "done",
+        "lr_copy": {
+            "0": {}
+        },
+        "invoice": {
+            "0": {}
+        },
+        "temperature_log": {
+            "0": {}
+        },
+        "mandatory_checklist": {
+            "0": {}
+        },
+        "caseID": "QSC-2023-51551454",
+        "supportingFiles": [
+            {
+                "field_name": "lr_copy",
+                "file_name": "8yd19xJDSgnsihdlurGxE9_d.pdf"
+            },
+            {
+                "field_name": "invoice",
+                "file_name": "u1NuOKd5y6JvQFl2Opw8QDeA.pdf"
+            },
+            {
+                "field_name": "temperature_log",
+                "file_name": "0ZsVFZo71gLTI39NdCFax3Sf.png"
+            },
+            {
+                "field_name": "mandatory_checklist",
+                "file_name": "1UGdvtBFMdLFJ3Iv_TDRBplu.pdf"
+            }
+        ],
+        "articles": [
+            {
+                "consingnment_id": "000001111",
+                "invoice_quantity": "30",
+                "received_quantity": "30",
+                "damaged_quantity": "30",
+                "over_delivery": "0",
+                "suggested_action": "test",
+                "article_value": "30000",
+                "action_confirmation": "yes",
+                "nc_codes": "121",
+                "labor_hours": "3",
+                "other_cost": "32",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002103",
+                "supplier_number": "100000620",
+                "damage_type": "package",
+                "causing_party_code": "100000857",
+                "manufacturing_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+                "dispatch_date": "Thu Nov 20 2023 00:00:00 GMT+0530 (India Standard Time)",
+                "best_before_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+                "expiry_date": "Thu Nov 09 2023 00:00:00 GMT+0530 (India Standard Time)",
+                "uniquie_id": "QSC-2023-51551454_67609676873263",
+                "store_id": "545",
+                "damage_picture": "6weEcie6v6xHJ856c78yjgKJ.pdf"
+            }
+        ],
+        "status": "AI",
+        "notes": "text notes"
+    },
+    {
+        "name": "test write to file",
+        "invoice_number": "12345",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "carrier_name": "asfsdf",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {
+            "0": {}
+        },
+        "invoice": {
+            "0": {}
+        },
+        "temperature_log": {
+            "0": {}
+        },
+        "mandatory_checklist": {
+            "0": {}
+        },
+        "type": "PQ",
+        "invoice_date": "29-Nov-2023",
+        "sender_name": "100001729",
+        "receiving_unit_code": "501",
+        "caseID": "QSC-2023-69634192",
+        "supportingFiles": [
+            {
+                "field_name": "lr_copy",
+                "file_name": "RlebRuP1oplkmD2vSH5GFerQ.pdf"
+            },
+            {
+                "field_name": "invoice",
+                "file_name": "NX8vteepHiEPbfk8Fu2hAZa6.pdf"
+            },
+            {
+                "field_name": "temperature_log",
+                "file_name": "-Md8vsD1qRa86Hu54lD24jbX.pdf"
+            },
+            {
+                "field_name": "mandatory_checklist",
+                "file_name": "52WnKT3n7LsrgUXKzYVJ4buS.pdf"
+            }
+        ],
+        "articles": [
+            {
+                "batch_number": "234567",
+                "damaged_quantity": "30",
+                "over_delivery": "0",
+                "suggested_action": "test",
+                "action_confirmation": "yes",
+                "labor_hours": "4",
+                "other_cost": "8000",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002100",
+                "supplier_number": "100000429",
+                "damage_type": "package",
+                "causing_party_code": "100001671",
+                "manufacturing_date": "2023-11-21",
+                "dispatch_date": "2023-11-21",
+                "best_before_date": "2023-11-21",
+                "expiry_date": "2023-11-21 ",
+                "uniquie_id": "QSC-2023-69634192_49661670597014",
+                "store_id": "501",
+                "damage_picture": "N5m0mkK6o23FuxtK5C4w2zv_.pdf"
+            }
+        ],
+        "status": "AI"
+    },
+    {
+        "name": "check supporting files upload",
+        "invoice_number": "156489",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "carrier_name": "3434",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {
+            "0": {}
+        },
+        "invoice": {
+            "0": {}
+        },
+        "temperature_log": {
+            "0": {}
+        },
+        "mandatory_checklist": {
+            "0": {}
+        },
+        "type": "PQ",
+        "invoice_date": "15-Nov-2023",
+        "sender_name": "100000857",
+        "receiving_unit_code": "578",
+        "caseID": "QSC-2023-95772917",
+        "supportingFiles": [
+            {
+                "field_name": "lr_copy",
+                "file_name": "F2T_FMOKg6qOn-hAKHxSALoX.pdf"
+            },
+            {
+                "field_name": "invoice",
+                "file_name": "8eUgSokzOVFWz0t7J0DEjjZj.pdf"
+            },
+            {
+                "field_name": "temperature_log",
+                "file_name": "qDdIVhqoxHWpHFfJxu9gPNu1.pdf"
+            },
+            {
+                "field_name": "mandatory_checklist",
+                "file_name": "EG8kloS9pKuN6PhxLLsFJKV_.pdf"
+            }
+        ],
+        "articles": [
+            {
+                "batch_number": "0001111",
+                "damaged_quantity": "20",
+                "over_delivery": "0",
+                "suggested_action": "test",
+                "action_confirmation": "test",
+                "labor_hours": "4",
+                "other_cost": "666",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100003631",
+                "supplier_number": "100000620",
+                "damage_type": "package",
+                "causing_party_code": "100001729",
+                "manufacturing_date": "15-Nov-2023",
+                "dispatch_date": "22-Nov-2023",
+                "best_before_date": "15-Nov-2023",
+                "expiry_date": "16-Nov-2023",
+                "uniquie_id": "QSC-2023-95772917_189560618311",
+                "store_id": "578",
+                "damage_picture": "EYduSJfzUzl9WcTGD6bS1fMy.pdf"
+            },
+            {
+                "expiry_date": "2023-11-14T18:30:00.000Z",
+                "best_before_date": "2023-11-14T18:30:00.000Z",
+                "dispatch_date": "2023-11-21T18:30:00.000Z",
+                "manufacturing_date": "2023-11-14T18:30:00.000Z",
+                "batch_number": "000111166",
+                "damaged_quantity": "20",
+                "damage_pictures": {},
+                "uniquie_id": "QSC-2023-95772917_189560618311",
+                "caseId": "QSC-2023-95772917",
+                "store_id": "SO",
+                "articel_number": "100003631",
+                "supplier_number": "100000620",
+                "causing_party_code": "100001729",
+                "damage_type": "package"
+            },
+            {
+                "expiry_date": "2023-11-14T18:30:00.000Z",
+                "best_before_date": "2023-11-14T18:30:00.000Z",
+                "dispatch_date": "2023-11-21T18:30:00.000Z",
+                "manufacturing_date": "2023-11-14T18:30:00.000Z",
+                "batch_number": "0001111668",
+                "damaged_quantity": "20",
+                "damage_pictures": {},
+                "uniquie_id": "QSC-2023-95772917_189560618311",
+                "caseId": "QSC-2023-95772917",
+                "store_id": "545",
+                "articel_number": "100003631",
+                "supplier_number": "100000620",
+                "causing_party_code": "100001729",
+                "damage_type": "package"
+            }
+        ],
+        "status": "AP"
+    },
+    {
+        "name": "demo ",
+        "invoice_number": "67890",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "carrier_name": "demo",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {
+            "0": {}
+        },
+        "invoice": {
+            "0": {}
+        },
+        "temperature_log": {
+            "0": {}
+        },
+        "mandatory_checklist": {},
+        "type": "PQ",
+        "invoice_date": "15-Nov-2023",
+        "sender_name": "100000686",
+        "receiving_unit_code": "545",
+        "caseID": "QSC-2023-19175428",
+        "supportingFiles": [],
+        "articles": [
+            {
+                "batch_number": "989989",
+                "damaged_quantity": "20",
+                "over_delivery": "0",
+                "suggested_action": "Action",
+                "action_confirmation": "test",
+                "labor_hours": "7",
+                "other_cost": "3000",
+                "damage_pictures": {
+                    "0": {}
+                },
+                "articel_number": "100002620",
+                "supplier_number": "100000857",
+                "damage_type": "package",
+                "causing_party_code": "100000683",
+                "manufacturing_date": "07-Dec-2023",
+                "dispatch_date": "14-Dec-2023",
+                "best_before_date": "21-Dec-2023",
+                "expiry_date": "24-Nov-2023",
+                "uniquie_id": "QSC-2023-19175428_76261582808616",
+                "store_id": "545",
+                "damage_picture": "tsm13EF1zj0_SgUKc5obexBh.pdf",
+                "affected_quantity": "",
+                "available_stock": "50"
+            }
+        ],
+        "status": "AI"
+    },
+    {
+        "name": "",
+        "invoice_number": "2342",
+        "unique_shipment_id": "",
+        "consingnment_id": "",
+        "transport_id": "",
+        "receiving_unit_code": "545",
+        "carrier_name": "test",
+        "searl_number": "",
+        "truck_temprature": "",
+        "shipment_checklist": "",
+        "lr_copy": {
+            "0": {}
+        },
+        "invoice": {},
+        "temperature_log": {},
+        "mandatory_checklist": {},
+        "type": "PQ",
+        "categoty": "test",
+        "safty_alaram_number": "21432",
+        "invoice_copy": {},
+        "invoice_date": "13-Dec-2023",
+        "sender_name": "100001671",
+        "caseID": "QSC-2023-275179967",
+        "supportingFiles": [
+            {
+                "field_name": "lr_copy",
+                "file_name": "1QUITtTiXL8TxIA_XAISqF6f.docx"
+            }
+        ],
+        "articles": [],
+        "status": "open"
+    },
+    {
+        "name": "demo s",
+        "invoice_number": "67890d",
+        "unique_shipment_id": "24324",
+        "consingnment_id": "000001111",
+        "transport_id": "21354235",
+        "receiving_unit_code": "545",
+        "carrier_name": "demore",
+        "searl_number": "859565",
+        "truck_temprature": "23",
+        "lr_copy": {},
+        "invoice": {},
+        "temperature_log": {},
+        "shipment_checklist": {},
+        "type": "SQ",
+        "invoice_date": "15-Nov-2023",
+        "sender_name": "100000683",
+        "dispatch_date": "20-Dec-2023",
+        "shipment_type": "Ambient",
+        "caseID": "QSC-2023-8995428",
+        "supportingFiles": [],
+        "articles": [
+            {
+                "article_value": "30000",
+                "hsn_code": "0009112",
+                "consingnment_id": "000001111",
+                "invoice_quantity": "20",
+                "received_quantity": "30",
+                "damaged_quantity": "20",
+                "over_delivery": "0",
+                "suggested_action": "test",
+                "nc_codes": "test",
+                "labor_hours": "5",
+                "other_cost": "8000",
+                "damage_pictures": {},
+                "articel_number": "100002101",
+                "manufacturing_date": "20-Dec-2023",
+                "dispatch_date": "20-Dec-2023",
+                "best_before_date": "20-Dec-2023",
+                "expiry_date": "20-Dec-2023",
+                "supplier_number": "100000683",
+                "damage_type": "package",
+                "uniquie_id": "QSC-2023-8995428_81469813756926",
+                "store_id": "545",
+                "action_confirmation": "By qsc edit form"
+            }
+        ],
+        "status": "open"
+    }
+]
