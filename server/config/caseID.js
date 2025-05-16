@@ -9,4 +9,3 @@ exports.case_id =(type) =>{
         serialNumber[type] = parseInt(caseSerialNumber)+1;
     return type+moment().format('MMYY')+caseSerialNumber;
 }
-///jjjjj
