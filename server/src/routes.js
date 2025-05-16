@@ -9,8 +9,6 @@ module.exports = (app) => {
     app.use('/api/auth/', Auth);
     app.use('/api/generate/', GenerateFiles);
     app.use('/api/check',function(req,res,next){
-        console.log('hello')
         res.send({'status':'ok'});
-        
     });
 }
