@@ -66,7 +66,7 @@ const Dashboard = () => {
                             onClick={(e)=>handleClick(e)}
                             paymentLogo={null}
                             quantityLabel=""
-                            title="Approved"
+                            title="Approvedd"
                         />
                           <ListViewItem
                           key="tab-3"
