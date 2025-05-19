@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import ListView, { ListViewItem } from "@ingka/list-view";
 
+
 import Content from './content'
 const Dashboard = () => {
     const URLdata = useParams()
